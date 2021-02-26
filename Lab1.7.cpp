@@ -1,6 +1,5 @@
 ﻿#include <iostream>
 #include "Triangle.h"
-#include "Angle.h"
 
 int main()
 {   
@@ -42,10 +41,21 @@ int main()
     cout << "\nAngles: " << endl;
     first.DisplayAngles();
 
-    first.InitSides(5, 5, 5);
+    cout << "\nSides" << endl;
+    first.ReadSides();
+
     cout << "\nSides" << endl;
     first.DisplaySides();
 
+    cout << "\nSquare" << endl;
+    cout << first.Square() << endl;
+
+    cout << "\nAltitude A" << endl;
+    cout << first.Altitude(1) << endl;
+
+
+    cout << "\nPerimeter" << endl;
+    cout << first.Perimeter() << endl;
     cout << "\nIncrease angle A" << endl;
     X.Read();
 
@@ -62,7 +72,6 @@ int main()
     cout << "\nType of triangle" << endl;
     first.TypeOFTriangle();
    
-
     cout << "\nDecrease angle A" << endl;
     X.Read();
 

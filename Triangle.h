@@ -27,9 +27,10 @@ public:
 
 	void InitAngles(Angle A, Angle B, Angle C);
 	void InitSides(double a, double b, double c);
+	void ReadSides();
 
 	double Square() const;
-	double Perimeter() const;
+	double Perimeter() const; 
 	double Altitude(int tmp) const;
 	void TypeOFTriangle();
 	void Equalizetriangle(int tmp);

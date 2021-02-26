@@ -1,5 +1,4 @@
 #include "Triangle.h"
-#include "Angle.h"
 
 void Triangle::SetA(Angle A)
 {
@@ -57,6 +56,12 @@ void Triangle::InitSides(double a, double b, double c)
 	this->b = b;
 	this->c = c;
 }
+void Triangle::ReadSides()
+{
+	cout << "\na = "; cin >> a;
+	cout << "b = "; cin >> b;
+	cout << "c = "; cin >> c;
+}
 
 double Triangle::Square() const
 {
@@ -69,11 +74,11 @@ double Triangle::Altitude(int tmp) const
 	switch (tmp)
 	{
 	case 1:
-		return (2 * Square()) * Get_a();
+		return (2 * Square()) / (Get_a() * 1.);
 	case 2:
-		return (2 * Square()) * Get_b();
+		return (2 * Square()) / (Get_b() * 1.);
 	case 3:
-		return (2 * Square()) * Get_c();
+		return (2 * Square()) / (Get_c() * 1.);
 	}
 }
 void Triangle::TypeOFTriangle()
