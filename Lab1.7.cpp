@@ -45,9 +45,6 @@ int main()
     first.InitSides(5, 5, 5);
     cout << "\nSides" << endl;
     first.DisplaySides();
-    
-    cout << "\nType of triangle" << endl;
-    first.TypeOFTriangle();
 
     cout << "\nIncrease angle A" << endl;
     X.Read();

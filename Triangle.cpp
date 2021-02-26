@@ -84,15 +84,11 @@ void Triangle::TypeOFTriangle()
 		(Get_a() == Get_c() && Get_a() != Get_b()) ||
 		(Get_c() == Get_b() && Get_c() != Get_a()))
 		cout << "Isosceles triangle" << endl;//рівнобедрений
-	else if (A.getSin() == 1 || B.getSin() || C.getSin())
+	else if (A.to360() == 90 || B.to360() == 90 || C.to360() == 90)
 		cout << "Rectangular triangle" << endl;//прямокутний
-	else if ((Get_a() * Get_a() > Get_b() * Get_b() + Get_c() * Get_c()) ||
-		(Get_b() * Get_b() > Get_a() * Get_a() + Get_c() * Get_c()) || 
-		(Get_c() * Get_c() > Get_a() * Get_a() + Get_b() * Get_b()))
+	else if (A.to360() > 90 || B.to360() > 90 || C.to360() > 90)
 		cout << "Obtuse triangle" << endl;// тупокутний 
-	else if ((Get_a() * Get_a() < Get_b() * Get_b() + Get_c() * Get_c()) ||
-		(Get_b() * Get_b() < Get_a() * Get_a() + Get_c() * Get_c()) ||
-		(Get_c() * Get_c() < Get_a() * Get_a() + Get_b() * Get_b()))
+	else if (A.to360() < 90 && B.to360() < 90 && C.to360() < 90)
 		cout << "Oxygon" << endl;// гострокутний
 }
 
